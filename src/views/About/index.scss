@@ -47,8 +47,10 @@
           box-shadow: $card-shadow-light;
         }
       }
-
       .info {
+        background-image:-webkit-linear-gradient(bottom,#5583EE,#A16BFE,#5583EE,#6DE195);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
         margin-left: 16px;
         display: flex;
         flex-direction: column;
@@ -60,6 +62,21 @@
           margin-right: 3px;
         }
       }
+    }
+    .icon-fort-awesome {
+      background-image:-webkit-linear-gradient(bottom,#FDEB82,#F78FAD,#F78FAD,#FDEB82);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .icon-graduation-cap{
+      background-image:-webkit-linear-gradient(bottom,#D279EE,#D279EE,#F8C390,#F8C390);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .icon-tripadvisor{
+      background-image:-webkit-linear-gradient(bottom,#ABC7FF,#ABC7FF,#C1E3FF,#C1E3FF);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
 
     .contact {

@@ -17,11 +17,12 @@
               <i class="icon icon-bookmark-empty"></i>
               {{ post.milestone ? post.milestone.title : '未分类' }}
             </span>
-            <span>
-              <i class="icon icon-tag"></i>
-              <span v-for="label in post.labels.slice(0, 2)" :key="label.id">{{ label.name }}</span>
-            </span>
           </div>
+          <span>
+               [  <i class="icon icon-tag"></i> &emsp;
+              <span style="color: #d049ff " v-for="label in post.labels.slice(0, 5)" :key="label.id">{{ label.name }}&emsp;</span>  ]
+            </span>
+
         </router-link>
       </li>
     </ul>

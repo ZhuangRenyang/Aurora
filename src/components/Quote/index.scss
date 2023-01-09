@@ -8,6 +8,9 @@
   padding: 32px 0;
 
   span {
+    background-image:-webkit-linear-gradient(bottom,#D4FC78,#E13680,#A43AB2,#A43AB2);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
     letter-spacing: 1px;
     font-size: $font-size-large;
   }
@@ -17,10 +20,16 @@
     font-size: $font-size-icon;
   }
   i:first-child {
+    background-image:-webkit-linear-gradient(bottom,#FDEB82,#F78FAD,#FDEB82,#F78FAD);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
     top: 0;
     left: 16px;
   }
   i:last-child {
+    background-image:-webkit-linear-gradient(bottom,#5583EE,#5583EE,#41D8DD,#41D8DD);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
     bottom: 0;
     right: 16px;
   }

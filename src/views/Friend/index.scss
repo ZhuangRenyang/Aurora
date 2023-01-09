@@ -5,6 +5,9 @@
   }
 
   .me {
+    background-image:-webkit-linear-gradient(bottom,#121317,#9D2E7D,#FDEB82,#121317);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
     display: flex;
     flex-direction: column;
     line-height: $line-height-block;
@@ -25,7 +28,7 @@
     }
 
     a {
-      @include link;
+      //@include link;
     }
   }
 

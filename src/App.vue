@@ -122,9 +122,12 @@ export default {
   }
 
   .main {
+    border-radius:4px;
     margin: 0 auto;
     max-width: $page-desktop;
     user-select: text;
+    background-image: url("../public/img/wallhaven-gpjxe7.jpg");
+    background-size: cover; /* cover是专门用来设置全屏背景的 */
   }
 }
 </style>

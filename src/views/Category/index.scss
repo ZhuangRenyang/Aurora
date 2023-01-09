@@ -81,6 +81,9 @@
       }
 
       p {
+        background-image:-webkit-linear-gradient(bottom,#323B42,#323B42,#121317,#121317);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
         position: absolute;
         bottom: 0;
         padding: 0 32px;

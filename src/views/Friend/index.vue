@@ -7,9 +7,9 @@
           <span>欢迎各位大佬交换友链 (づ￣ 3￣)づ</span>
           <span>★ Bio：蝉时雨</span>
           <span>★ Motto：蝉鸣如雨，花宵道中</span>
-          <span>★ URL：https://chanshiyu.com</span>
+          <span>★ URL：https://github.com/ZhuangRenyang</span>
           <span
-            >★ Avatar：<a href="https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/avatar.jpg" target="_blank"
+            >★ Avatar：<a href="https://github.com/ZhuangRenyang" target="_blank"
               >点击获取</a
             ></span
           >
