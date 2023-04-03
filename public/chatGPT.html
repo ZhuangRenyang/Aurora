@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPT</title>
+<style>
+    button {
+        display: block;
+        margin: 0 auto;
+    }
+    @keyframes rainbow {
+      0% {
+        background-position: 0%;
+      }
+      50% {
+        background-position: 100%;
+      }
+      100% {
+        background-position: 0%;
+      }
+    }
+    #chat-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        #chat-window {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 400px;
+            height: 400px;
+            background-color: #fff;
+            overflow-y: scroll;
+        }
+  </style>
+</head>
+<body>
+<main>
+<div id="storageInfo"></div>
+<button style="
+  margin-top: 10px;
+  align-items: center;
+  background: linear-gradient(45deg, #F44336, #FFEB3B, #4CAF50, #2196F3, #9C27B0);
+  background-size: 400%;
+  animation: rainbow 10s ease infinite;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  outline: none;
+  text-transform: uppercase;"
+        onclick="confirmClearLocalStorage()">
+    清空localStorage
+</button>
+    <div id="app" style="display: flex;flex-flow: column;margin: 20px; ">
+        <scroll-view scroll-with-animation scroll-y="true" style="width: 100%; ">
+            <!-- 用来获取消息体高度 -->
+            <view id="okk" scroll-with-animation>
+                <!-- 消息 -->
+                <view  v-for="(x,i) in msgList" :key="i">
+                    <!-- 用户消息 头像可选加入-->
+                    <view v-if="x.my" style="display: flex;
+                flex-direction: column;
+                align-items: flex-end;">
+                        <view style="margin: 7px; display: flex; align-items: center;">
+                            <view style="border-radius: 35px;">
+                                <text style="word-break: break-all;">{{x.msg}}&nbsp;&nbsp;</text>
+                            </view>
+                            <image src="您的头像地址哦" style="width: 40px; height: 40px; border-radius: 20px;"></image>
+                            <!-- <image src="https://img2.woyaogexing.com/2017/07/07/67ca73a32fe97f63!400x400_big.jpg" style="width: 40px; height: 40px; border-radius: 80rpx;"></image> -->
+                        </view>
+                    </view>
+                    <!-- 机器人消息 -->
+                    <view v-if="!x.my" style="display: flex;
+                flex-direction: row;
+                align-items: flex-start;">
+                        <view style="margin: 5px; display: flex; align-items: center;">
+                            <image src="机器人的头像地址哦"
+                                   style="width: 40px; height: 40px; border-radius: 20px;"></image>
+                            <view style="border-radius: 35px;background-color: #f9f9f9;">
+                                <text style="word-break: break-all;">&nbsp;&nbsp;{{x.msg}}</text>
+                                <!-- &nbsp;加两个空格，美观一些 -->
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view style="height: 130px;">
+                </view>
+            </view>
+        </scroll-view>
+        <!-- 底部导航栏 -->
+        <view ref="toggleView" style="margin: 5px; position: relative; top: 100px;
+    bottom:0px;display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;">
+            <view style="font-size: 55px;display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;width: 80%;
+    margin: 1px;">
+
+                <input v-model="msg" type="text" style="width: 100%;
+            height: 45px;
+            border-radius: 50px;
+            padding-left: 1px;
+            margin-left: 1px;background-color: #f0f0f0;" @confirm="sendMsg" confirm-type="search"
+                       placeholder-class="my-neirong-sm" placeholder="  请输入"/>
+                <button @click="sendMsg" :disabled="msgLoad" style="height: 45px;
+            width: 35%;;
+    color: #030303;    border-radius: 2500px;">{{sentext}}
+                </button>
+            </view>
+        </view>
+    </div>
+</main>
+</body>
+<script src="plugins/axios.min.js"></script>
+<script src="plugins/vue.global.js"></script>
+<script>
+    function updateStorageInfo() {
+    const usedSpace = JSON.stringify(localStorage).length;
+    const totalSpace = 5 * 1024 * 1024; // 5MB
+    const freeSpace = totalSpace - usedSpace;
+    const usedPercentage = (usedSpace / totalSpace) * 100;
+    const storageInfoDiv = document.getElementById("storageInfo");
+    storageInfoDiv.innerHTML = `localStorage已使用 ${usedPercentage.toFixed(2)}%（${(usedSpace / 1024).toFixed(2)}KB），剩余 ${(freeSpace / 1024).toFixed(2)}KB`;
+    }
+    updateStorageInfo();
+    window.addEventListener("storage", function() {
+    updateStorageInfo();
+    });
+</script>
+<script>
+    function confirmClearLocalStorage() {
+        if (confirm("您确定要清空localStorage吗？此操作不可撤销！")) {
+            localStorage.clear();
+            alert("localStorage已清空");
+        }
+    }
+</script>
+<script>
+    const { createApp } = Vue
+    createApp({
+        data() {
+            return {
+                navVisible: true,
+                api: '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',
+                msgLoad: false,
+                anData: {},
+                sentext: '发送',
+                animationData: {},
+                showTow: false,
+                msgList: [{
+                    my: false,
+                    msg: "你好我是openAI机器人,请问有什么问题可以帮助您?"
+                }],
+                msgContent: "",
+                msg: "",
+            }
+        },
+        methods: {
+            sendMsg() {
+                // 消息为空不做任何操作
+                if (this.msg == "") {
+                    return 0;
+                }
+                this.sentext = '请求中'
+                this.msgList.push({
+                    "msg": this.msg,
+                    "my": true
+                })
+                console.log(this.msg);
+                this.msgContent += ('YOU:' + this.msg + "\n")
+                // 添加聊天记录到localStorage中
+                let chatHistory = localStorage.getItem('chatHistory') || '[]';
+                chatHistory = JSON.parse(chatHistory);
+                chatHistory.push({
+                    "msg": this.msg,
+                    "my": true
+                });
+                localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+                this.msgLoad = true
+                // 清除消息
+                this.msg = ""
+                axios.post('https://api.openai.com/v1/completions', {
+                    prompt: this.msgContent, max_tokens: 2048, model: "text-davinci-003"
+                }, {
+                    headers: { 'content-type': 'application/json', 'Authorization': 'Bearer ' + this.api }
+                }).then(res => {
+                    console.log(res);
+                    let text = res.data.choices[0].text.replace("openai:", "").replace("openai：", "").replace(/^\n|\n$/g, "")
+                    console.log(text);
+                    this.msgList.push({
+                        "msg": text,
+                        "my": false
+                    })
+                    this.msgContent += (text + "\n")
+                     // 添加聊天记录到localStorage中
+                    let chatHistory = localStorage.getItem('chatHistory') || '[]';
+                    chatHistory = JSON.parse(chatHistory);
+                    chatHistory.push({
+                        "msg": text,
+                        "my": false
+                    });
+                    localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+
+                    this.msgLoad = false
+                    this.sentext = '发送'
+                }).catch(error => {
+                    alert(error);//弹出异常
+                    let text = "" //重置text
+                    this.msgList.push({
+                        "msg": "服务异常，请重新发送..",
+                        "my": false
+                    })
+                    this.msgContent += (text + "\n")
+                    this.msgLoad = false
+                    this.sentext = '发送'//再次点击发送
+                });
+            },
+        }
+    }).mount('#app')
+</script>
+</html>

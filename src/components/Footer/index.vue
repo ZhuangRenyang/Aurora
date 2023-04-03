@@ -37,6 +37,27 @@
         | {{ $config.subtitle }}
       </p>
     </div>
+    <div style=" position:absolute;
+      height:120px;
+      line-height:25px;
+      background-color:#eea236;
+      width:40px;
+      right:0px;
+      top:-1950px;
+      text-align:center;
+      box-sizing:border-box;
+      padding:10px 10px;
+      border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+      font-weight:bold;
+      color:#ffffff;"
+         @click="toggleModal">
+      <a
+          style=" position: sticky;top: 10px;">
+        智能助手
+      </a>
+    </div>
+    <Chat v-show="chatGPT" v-on:closeme="closeme"></Chat>
     <img
       v-if="!$isMobile.value"
       class="sakura cursor"
@@ -47,7 +68,6 @@
     />
   </footer>
 </template>
-
 <script>
 import { mapState } from 'vuex'
 import { random } from '@/utils'
@@ -55,6 +75,7 @@ import model from '@/assets/live2d/waifu.json'
 import tips from '@/assets/live2d/tips.json'
 import costume from '@/assets/live2d/costume.json'
 import images from '@/assets/images'
+import Chat from "@/components/ChatGPT/index.vue";
 
 const { waifuClick, hoverTips, clickTips, hitokotos } = tips
 const { sakura } = images
@@ -76,7 +97,11 @@ export default {
       ],
       audio: this.$config.APlayer,
       isMini: true,
+      chatGPT:false,
     }
+  },
+  components:{
+    Chat
   },
   computed: mapState({
     tips: (state) => state.tips,
@@ -167,6 +192,50 @@ export default {
     dropPanel() {
       this.$store.commit('setShowPanel', true)
     },
+    toggleModal:function(){
+      this.chatGPT = !this.chatGPT;
+    },
+    closeme:function(){
+      this.chatGPT = !this.chatGPT;
+    },
+    /**
+     * 打开小窗口
+     */
+    openWindow(url, title, w, h) {
+      const dualScreenLeft =
+          window.screenLeft !== undefined ? window.screenLeft : screen.left;
+      const dualScreenTop =
+          window.screenTop !== undefined ? window.screenTop : screen.top;
+
+      const width = window.innerWidth
+          ? window.innerWidth
+          : document.documentElement.clientWidth
+              ? document.documentElement.clientWidth
+              : screen.width;
+      const height = window.innerHeight
+          ? window.innerHeight
+          : document.documentElement.clientHeight
+              ? document.documentElement.clientHeight
+              : screen.height;
+
+      const left = width / 2 - w / 2 + dualScreenLeft;
+      const top = height / 2 - h / 2 + dualScreenTop;
+      const newWindow = window.open(
+          url,
+          title,
+          "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, copyhistory=no, width=" +
+          w +
+          ", height=" +
+          h +
+          ", top=" +
+          top +
+          ", left=" +
+          left
+      );
+      if (window.focus) {
+        newWindow.focus();
+      }
+    },
   },
 }
 </script>
@@ -174,3 +243,4 @@ export default {
 <style lang="scss" scope>
 @import './index.scss';
 </style>
+
