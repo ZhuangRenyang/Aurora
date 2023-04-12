@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="referrer" content="no-referrer" />
-    <meta name="author" content="蝉時雨" />
-    <meta name="description" content="蝉鸣如雨 花宵道中" />
-    <meta name="keywords" content="Code, ACG, Aurora, 蝉时雨" />
-    <link rel="apple-touch-icon" sizes="180x180" href="<%= BASE_URL %>assets/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="<%= BASE_URL %>assets/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="<%= BASE_URL %>assets/favicon-32x32.png" />
-    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
-    <link rel="dns-prefetch" href="//i0.hdslb.com" />
-    <link rel="dns-prefetch" href="//chanshiyu.com" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="referrer" content="no-referrer"/>
+    <meta name="baidu-site-verification" content="codeva-kGXqiV7EC6"/>
+    <meta name="sogou_site_verification" content="iacKTxMUek" />
+    <meta name="msvalidate.01" content="E4BB7EC21ABF906F915F36F53B5D08D3" />
+    <meta name="google-site-verification" content="841MqOVHbveEfQOT282S-TgpoWIptelCMEoctpbTSUw" />
+    <title>蝉時雨 | 蝉鸣如雨 花宵道中</title>
+    <meta name="author" content="庄任阳"/>
+    <meta name="description" content="蝉鸣如雨 花宵道中"/>
+    <meta name="keywords" content="Code, ACG, Aurora, 庄任阳,个人博客,Java,HTML5,代码,语言,社交,博客"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= BASE_URL %>assets/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= BASE_URL %>assets/favicon-16x16.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= BASE_URL %>assets/favicon-32x32.png"/>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net"/>
+    <link rel="dns-prefetch" href="//i0.hdslb.com"/>
+    <link rel="dns-prefetch" href="//chanshiyu.com"/>
     <!-- 引入样式 -->
     <% for(var css of htmlWebpackPlugin.options.cdn.css) { %>
-    <link rel="stylesheet" href="<%=css%>" />
+    <link rel="stylesheet" href="<%=css%>"/>
     <% } %>
     <script src="/live2d/live2d.min.js"></script>
-    <title>蝉時雨 | 蝉鸣如雨 花宵道中</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>
+</head>
+<body>
+<noscript>
+    <strong>
         We're sorry but aurora doesn't work properly without JavaScript enabled. Please enable it to continue.
-      </strong>
-    </noscript>
-    <div id="bg"></div>
-    <div id="app"></div>
-    <!-- 引入JS -->
-    <% for(var js of htmlWebpackPlugin.options.cdn.js) { %>
-    <script src="<%=js%>"></script>
-    <% } %>
-  </body>
+    </strong>
+</noscript>
+<div id="bg"></div>
+<div id="app"></div>
+<!-- 引入JS -->
+<% for(var js of htmlWebpackPlugin.options.cdn.js) { %>
+<script src="<%=js%>"></script>
+<% } %>
+</body>
 </html>
