@@ -118,29 +118,29 @@ export default {
     college: 'Computer Science and Technology',
     contact: [
       {
-        icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/email.png',
+        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/email.png',
         link: 'http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=tNnR9Nfc1drH3N3NwZrX29k',
       },
       {
-        icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/github.png',
+        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/github.png',
         link: 'https://github.com/ZhuangRenyang',
       },
       {
-        icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/music.png',
+        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/music.png',
         link: 'https://music.163.com/#/user/home?id=1651928313',
       },
       {
-        icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/telegram.png',
+        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/telegram.png',
         link: 'https://t.me/chan_shi_yu',
       },
       {
-        icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/twitter.png',
-        link: 'https://twitter.com/chanshiyucx',
+        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/twitter.png',
+        link: 'https://twitter.com/make94584971',
       },
-      // {
-      //   icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/rsshub.png',
-      //   link: 'https://rsshub.app/github/issue/chanshiyucx/blog',
-      // },
+      {
+        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/rsshub.png',
+        link: 'https://rsshub.app/github/issue/Zhuangrenyang/blog',
+      },
     ],
   },
 
@@ -153,12 +153,12 @@ export default {
   /**
    * 加载动画
    */
-  loadingImg: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/loading.gif',
+  loadingImg: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/loading.gif',
 
   /**
    * 文章默认图
    */
-  defaultCover: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/bg/defaultCover.jpg',
+  defaultCover: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/bg/defaultCover.jpg',
 
   /**
    * 赛钱箱
@@ -182,7 +182,7 @@ export default {
       name: 'うたかたの风と蝉时雨',
       artist: 'Little Planet',
       url: 'https://files.catbox.moe/wo7zjt.mp3',
-      cover: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/cover1.jpg',
+      cover: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/cover1.jpg',
     },
     {
       name: '蝴蝶泉边',

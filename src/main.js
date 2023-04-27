@@ -60,7 +60,7 @@ new Vue({
 
 // (o=^•ェ•)o
 const labelStyle = 'line-height:22px;color:#FFF;background:#D68FE9;'
-const themeRepo = 'https://github.com/chanshiyucx/aurora'
+const themeRepo = 'https://github.com/ZhuangRenyang/Aurora'
 console.info(`%c ${config.title} %c`, labelStyle, '', window.location.origin)
 console.info('%c Theme %c', labelStyle, '', themeRepo)
 console.info('~❀~ 发现控制台报错请务必联系博主 ~❀~')
