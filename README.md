@@ -10,7 +10,7 @@ Aurora 是一个基于 Vue 开发的 SPA 单页面博客应用程序，使用 [G
 
 技术栈：Vue + Github Pages + Github Issues + Github Api + Gitalk。
 
-在线演示：[蝉時雨](https://chanshiyu.com/treasure/aurora) 
+在线演示：[蝉時雨](https://ovoz.cn/) 
 
 ## Getting Started
 
@@ -29,7 +29,7 @@ npm install
 
 修改配置文件 `src/config.js`，每个配置项都有详细说明。
 
-完整详细的主题食用方法参考 [Aurora 食用指南](https://chanshiyu.com/#/post/41)。
+完整详细的主题食用方法参考 [Aurora 食用指南](https://github.com/ZhuangRenyang/Aurora)。
 
 ### Preview
 
