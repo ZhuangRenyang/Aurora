@@ -6,11 +6,11 @@ set -e
 # 构建
 npm run build
 
-# cd 到构建输出的目录下 
+# cd 到构建输出的目录下
 cd dist
 
 # 部署到自定义域名，没有自定义域名可注释掉
-#echo 'chanshiyu.com' > CNAME
+echo 'ovoz.cn' > CNAME
 
 git init
 git add -A

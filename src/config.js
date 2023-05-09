@@ -118,27 +118,27 @@ export default {
     college: 'Computer Science and Technology',
     contact: [
       {
-        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/email.png',
-        link: 'http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=tNnR9Nfc1drH3N3NwZrX29k',
+        icon: 'https://cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/email.png',
+        link: 'https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=tNnR9Nfc1drH3N3NwZrX29k',
       },
       {
-        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/github.png',
+        icon: 'https://cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/github.png',
         link: 'https://github.com/ZhuangRenyang',
       },
       {
-        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/music.png',
+        icon: 'https://cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/music.png',
         link: 'https://music.163.com/#/user/home?id=1651928313',
       },
       {
-        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/telegram.png',
+        icon: 'https://cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/telegram.png',
         link: 'https://t.me/chan_shi_yu',
       },
       {
-        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/twitter.png',
+        icon: 'https://cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/twitter.png',
         link: 'https://twitter.com/make94584971',
       },
       {
-        icon: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/rsshub.png',
+        icon: 'https://cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/rsshub.png',
         link: 'https://rsshub.app/github/issue/Zhuangrenyang/blog',
       },
     ],
@@ -153,12 +153,12 @@ export default {
   /**
    * 加载动画
    */
-  loadingImg: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/loading.gif',
+  loadingImg: 'https://cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/loading.gif',
 
   /**
    * 文章默认图
    */
-  defaultCover: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/bg/defaultCover.jpg',
+  defaultCover: 'https://cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/bg/defaultCover.jpg',
 
   /**
    * 赛钱箱
@@ -166,11 +166,11 @@ export default {
   qrcode: [
     {
       name: '支付宝',
-      img: 'https://raw.githubusercontent.com/ZhuangRenyang/blog/ba2c7d6727b75d4e5303e44bc5a830839b051d18/641c6a3f11db1_copy_qrcode.png',
+      img: 'https://cdn.jsdelivr.net/gh/ZhuangRenyang/yoi/MoneyBox/zhifubao.jpg',
     },
     {
       name: '微信',
-      img: 'https://raw.githubusercontent.com/ZhuangRenyang/blog/master/641c69cb6adbd_copy_qrcode.png',
+      img: 'https://cdn.jsdelivr.net/gh/ZhuangRenyang/yoi/MoneyBox/weixin.jpg',
     },
   ],
 
@@ -182,7 +182,7 @@ export default {
       name: 'うたかたの风と蝉时雨',
       artist: 'Little Planet',
       url: 'https://files.catbox.moe/wo7zjt.mp3',
-      cover: '//cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/cover1.jpg',
+      cover: 'https://cdn.jsdelivr.net/gh/Zhuangrenyang/yoi/blog/cover1.jpg',
     },
     {
       name: '蝴蝶泉边',
