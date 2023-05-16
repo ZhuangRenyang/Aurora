@@ -65,7 +65,7 @@ export default {
       milestone: '',
       totalCount: 0,
       page: 0,
-      pageSize: 10,
+      pageSize: 10000,
       posts: [],
       list: [],
       times: {},
