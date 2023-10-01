@@ -126,7 +126,7 @@ export default {
     margin: 0 auto;
     max-width: $page-desktop;
     user-select: text;
-    background-image: url('https://cdn.jsdelivr.net/gh/ZhuangRenyang/yoi/webImg/1.jpg');
+    background-image: url('https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/webImg/1.jpg');
     background-size: cover; /* cover是专门用来设置全屏背景的 */
   }
 }

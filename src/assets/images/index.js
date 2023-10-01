@@ -1,9 +1,9 @@
 export default {
-  sakura: 'https://cdn.jsdelivr.net/gh/ZhuangRenyang/yoi/blog/sakura.png',
-  reimu: 'https://cdn.jsdelivr.net/gh/ZhuangRenyang/yoi/blog/reimu.png',
+  sakura: 'https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/sakura.png',
+  reimu: 'https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/reimu.png',
   preview: {
-    touhou: 'https://cdn.jsdelivr.net/gh/ZhuangRenyang/yoi/blog/touhou.png',
-    school: 'https://cdn.jsdelivr.net/gh/ZhuangRenyang/yoi/blog/school.jpg',
+    touhou: 'https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/touhou.png',
+    school: 'https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/school.jpg',
   },
   bg: {
     touhou: [
