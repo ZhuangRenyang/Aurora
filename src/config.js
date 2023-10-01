@@ -158,7 +158,7 @@ export default {
   /**
    * 文章默认图
    */
-  defaultCover: 'https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/bg/defaultCover.jpg',
+  defaultCover: 'https://npm.elemecdn.com/zhuangimgblogs@1.0.1/Quadraticback/wallhaven-p9oq.jpg',
 
   /**
    * 赛钱箱
