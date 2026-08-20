@@ -22,7 +22,7 @@ export default {
    */
   username: 'ZhuangRenyang', // github 用户名
   repository: 'blog', // 文章仓库地址
-  token: ['ghp_ktLxgDKbBcCYkyTYAp', 'GPiE45SSwhAR36wU9a'],
+  token: ['ghp_LBnS8nGIDmrlUt8l', '1fpeFAHD76Azh93jRSvo'],
   // token: ['0ad1a0539c5b96fd18fa', 'aaafba9c7d1362a5746c'], // token 从中间任意位置拆开成两部分，避免 github 代码检测失效
 
   /**

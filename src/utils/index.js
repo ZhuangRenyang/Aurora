@@ -74,7 +74,7 @@ export const localRead = (key, defaultValue = '') => {
 /**
  * 图片 cdn 加速，只对时雨个人使用
  */
-const isMe = location.host.includes('ovoz.cn')
+const isMe = location.host.includes('shi.ila.cc.cd')
 const GithubPrefix = 'raw.githubusercontent.com/chanshiyucx/yoi/master'
 const JSDriverPrefix = 'cdn.jsdelivr.net/gh/chanshiyucx/yoi@latest'
 export const fileCDN = (url) => {

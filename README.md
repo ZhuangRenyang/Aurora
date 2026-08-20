@@ -10,7 +10,7 @@ Aurora 是一个基于 Vue 开发的 SPA 单页面博客应用程序，使用 [G
 
 技术栈：Vue + Github Pages + Github Issues + Github Api + Gitalk。
 
-在线演示：[蝉時雨](https://ovoz.cn/) 
+在线演示：[蝉時雨](https://shi.ila.cc.cd/) 
 
 ## Getting Started
 

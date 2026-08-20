@@ -10,7 +10,7 @@ npm run build
 cd dist
 
 # 部署到自定义域名，没有自定义域名可注释掉
-echo 'ovoz.cn' > CNAME
+echo 'shi.ila.cc.cd' > CNAME
 
 git init
 git add -A
